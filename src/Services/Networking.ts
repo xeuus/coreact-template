@@ -1,8 +1,9 @@
 import axios from "axios";
 import {HttpRequest, HttpResponse, NetLayer} from 'netlayer';
-import {optional, RequestContext, Service} from "coreact";
+import {optional, RequestContext, Service, Order} from "coreact";
 
 @Service
+@Order(Number.NEGATIVE_INFINITY)
 export class Networking extends NetLayer {
 
   constructor(context: RequestContext) {
@@ -18,7 +19,7 @@ export class Networking extends NetLayer {
           timeout: request.timeout || 15000,
           withCredentials: request.withCredentials || false,
           responseType: request.responseType || 'json',
-          baseURL: request.baseHref || context.proxies.default,
+          baseURL: request.baseUrl || context.proxies.default,
           headers: {
             'Content-Type': 'application/json',
             ...request.headers,

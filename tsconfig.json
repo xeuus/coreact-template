@@ -23,8 +23,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@lib/*": [
-        "src/@lib/*"
+      "Services/*": [
+        "src/Services/*"
       ]
     }
   },

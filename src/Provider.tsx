@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {AppProvider, RequestContext} from 'coreact';
-import {App} from './app';
+import {App} from './App';
 
 module.exports = class Provider extends AppProvider {
   constructor(context: RequestContext) {

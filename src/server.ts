@@ -8,7 +8,7 @@ const app = express();
 
 const server = new Server({
   mode: process.env.NODE_ENV,
-  provider: () => require('./provider'),
+  provider: () => require('./Provider'),
   assets: process.env.NODE_ENV != 'production' ? [
     '/dist/app.js',
   ] : [

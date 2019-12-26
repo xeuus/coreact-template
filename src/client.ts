@@ -1,2 +1,2 @@
 import {Client} from 'coreact';
-new Client(require('./provider'));
+new Client(require('./Provider'));
