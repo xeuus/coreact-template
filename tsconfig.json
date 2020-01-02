@@ -23,8 +23,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "Services/*": [
-        "src/Services/*"
+      "_services/*": [
+        "src/_services/*"
       ]
     }
   },

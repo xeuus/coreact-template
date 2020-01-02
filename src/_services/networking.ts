@@ -1,11 +1,10 @@
 import axios from "axios";
 import {HttpRequest, HttpResponse, NetLayer} from 'netlayer';
-import {optional, RequestContext, Service, Order} from "coreact";
+import {optional, RequestContext, Service, Order, Ordered} from "coreact";
 
 @Service
-@Order(Number.NEGATIVE_INFINITY)
+@Order(Ordered.HIGHEST_PRECEDENCE)
 export class Networking extends NetLayer {
-
   constructor(context: RequestContext) {
     super();
     this.driver = async (request: HttpRequest): Promise<HttpResponse> => {

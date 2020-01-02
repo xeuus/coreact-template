@@ -8,7 +8,7 @@ const app = express();
 
 const server = new Server({
   mode: process.env.NODE_ENV,
-  provider: () => require('./Provider'),
+  provider: () => require('./provider'),
   assets: process.env.NODE_ENV != 'production' ? [
     '/dist/app.js',
   ] : [
@@ -21,7 +21,6 @@ const server = new Server({
       address: process.env.API_ADDR,
     }
   },
-  envKeys: ['API_ADDR'],
   encrypt: true,
   version: +version,
   publicDir: ['/assets', path.resolve(__dirname, '../assets')],
@@ -29,7 +28,8 @@ const server = new Server({
   webpackOptions: process.env.NODE_ENV != 'production' ? require('../webpack.config.js') : {},
   rootPath: path.resolve(__dirname, '..'),
   srcPath: path.resolve(__dirname, '../src'),
-  storagePrefix: 'todos',
+  distPath: path.resolve(__dirname, '../dist'),
+  storagePrefix: 'coreact',
 });
 server.isolate(process.env.APP_NAME);
 server.start(app);
