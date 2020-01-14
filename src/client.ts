@@ -1,2 +1,3 @@
 import {Client} from 'coreact';
-new Client(require('./provider'));
+
+const provider = new Client(require('./provider'));

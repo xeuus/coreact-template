@@ -1,0 +1,35 @@
+{
+	"defaultSeverity": "error",
+	"extends": [
+		"tslint:recommended",
+		"tslint-react"
+	],
+	"jsRules": {},
+	"rules": {
+		"quotemark": [
+			true,
+			"single",
+			"jsx-double"
+		],
+		"indent": [
+			true,
+			"tabs",
+			4
+		],
+		"array-type": [
+			true,
+			"array"
+		],
+		"no-shadowed-variable": false,
+		"no-bitwise": false,
+		"jsx-no-multiline-js": false,
+		"member-ordering": false,
+		"object-literal-sort-keys": false,
+		"no-var-requires": false,
+		"no-return-await": true,
+		"no-console": false,
+		"max-line-length": false,
+		"jsx-alignment": true
+	},
+	"rulesDirectory": []
+}
